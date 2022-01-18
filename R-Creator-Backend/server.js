@@ -9,6 +9,7 @@ import jwt from "jsonwebtoken";
 import papersize from "./papersize.js";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import newsletter from "./newsletter.js";
 
 const SECRET_KEY = "qazwsxedc!@#$%$#@!";
 const app = express();
@@ -199,6 +200,23 @@ app.get("/rcreator/book/papersize", (req, res) => {
         res.status(500).send(err);
       } else {
         res.status(201).send(data);
+      }
+    });
+  } catch (error) {
+    res.status(500).send("Something went wrong! Please try after sometime.");
+  }
+});
+
+app.post("/rcreator/newsletter", async (req, res) => {
+  try {
+    const emails = req.body;
+    await newsletter.create(emails, (err, data) => {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res
+          .status(201)
+          .send("You have successfully subscribed our newsletter.");
       }
     });
   } catch (error) {

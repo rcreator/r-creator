@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import axios from "./Axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 
 function Common() {
   const [toggle, setToggle] = useState(false);
+  const [email, setEmail] = useState("");
+
+  function newsletter() {
+    axios
+      .post("/rcreator/newsletter", {
+        email: email,
+      })
+      .then((response) =>
+        toast.success(response.data, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        })
+      )
+      .catch((err) => {
+        toast.error(err.response.data, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      });
+
+    setEmail("");
+  }
 
   function sidebar() {
     return (
@@ -122,10 +146,15 @@ function Common() {
             <div className="flex w-full justify-between">
               <input
                 type="text"
+                value={email}
                 placeholder="Enter your email"
                 className="flex-1 p-2 text-black rounded-md"
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="cursor-pointer ml-2 btn-danger px-10 rounded-lg shadow-md">
+              <button
+                className="cursor-pointer ml-2 btn-danger px-10 rounded-lg shadow-md"
+                onClick={newsletter}
+              >
                 SEND
               </button>
             </div>
