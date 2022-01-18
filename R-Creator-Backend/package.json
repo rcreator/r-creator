@@ -1,0 +1,24 @@
+{
+  "name": "r-creator-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ravi Pambhar",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mogoose": "0.0.1-security",
+    "mongoose": "^6.1.5",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
+  }
+}
