@@ -42,13 +42,13 @@ function Common() {
               onClick={() => setToggle(false)}
             ></i>
           </li>
-          <Link to="/" className="w-full">
+          <Link to="/" className="w-48">
             <li className="cursor-pointer border-b border-gray-300 p-2 w-full text-right text-black	hover:bg-slate-200">
               Home
             </li>
           </Link>
           <Link to="/about" className="w-full">
-            <li className="cursor-pointer border-b border-gray-300 p-2 w-full text-right text-black	hover:bg-slate-200">
+            <li className="cursor-pointer p-2 w-full text-right text-black	hover:bg-slate-200">
               About
             </li>
           </Link>
@@ -61,12 +61,15 @@ function Common() {
     return (
       <header className="font-Poppins">
         <nav className="container flex items-center py-4 mt-4 sm:mt-12">
-          <h1 className="text-R-purple py-1 text-2xl">
-            R{" "}
-            <span className="text-R-white bg-R-purple px-2 rounded-md">
-              Creator
-            </span>
-          </h1>
+          <Link to="/">
+            <h1 className="text-R-purple py-1 text-2xl">
+              R{" "}
+              <span className="text-R-white bg-R-purple px-2 rounded-md">
+                Creator
+              </span>
+            </h1>
+          </Link>
+
           <ul className="hidden sm:flex flex-1 justify-end items-center text-R-blue uppercase text-sm lg:text-lg">
             <Link to="/">
               <li
@@ -103,12 +106,14 @@ function Common() {
     return (
       <footer className="flex flex-col gap-2 lg:flex-row w-full justify-between bg-R-blue text-white p-3 md:items-center">
         <div className="flex justify-center items-center">
-          <h1 className="text-R-purple py-1 text-2xl">
-            R{" "}
-            <span className="text-R-white bg-R-purple px-2 rounded-md">
-              Creator
-            </span>
-          </h1>
+          <Link to="/">
+            <h1 className="text-R-purple py-1 text-2xl">
+              R{" "}
+              <span className="text-R-white bg-R-purple px-2 rounded-md">
+                Creator
+              </span>
+            </h1>
+          </Link>
         </div>
 
         <div className="flex flex-1 px-10 items-center justify-center">

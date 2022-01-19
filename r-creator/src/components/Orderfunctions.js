@@ -67,12 +67,18 @@ const Orderfunctions = () => {
   }, [size]);
 
   useEffect(() => {
+    console.log("hello");
     axios
       .post("/rcreator/book/order", {
         min: min,
         max: max,
       })
-      .then((res) => setOrder(res.data))
+      .then((res) => {
+        setOrder(res.data);
+        if (res.data.total < max) {
+          setMax(res.data.total);
+        }
+      })
       .catch((err) => console.log(err));
   }, [tg]);
 

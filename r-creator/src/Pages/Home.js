@@ -33,16 +33,13 @@ function Home() {
       <div className="h-screen w-screen overflow-auto relative">
         {toggle && sidebar()}
         {header()}
-        <div className="container text-center text-3xl p-4 border">
-          {" "}
-          Examples
-        </div>
+
         <section className="container my-10 w-full relative p-0">
-          <h2 className="text-R-blue text-3xl lg:text-left mb-6 pb-3 mb-3">
+          <h2 className="text-R-blue text-3xl lg:text-left p-3 mb-1">
             1. Sign In, Sign Up, Logout
           </h2>
-          <div>{LoginSlider()}</div>
-          <div className="d-flex mt-16 flex-column flex-md-row">
+
+          <div className="d-flex mt-6 flex-column flex-md-row m-3">
             <div className="col-12 col-md-6 p-2">
               <h5>Use:</h5>
               <p className="text-R-grey text-lg text-start mb-6">
@@ -55,26 +52,32 @@ function Home() {
               </p>
             </div>
 
-            <Link
-              to="/login"
-              className="p-2 col-12 col-md-6 d-flex items-center justify-center"
-            >
-              <button
-                type="button"
-                className=" flex h-fit w-fit btn btn-primary mb-3 col-6"
+            <div className="p-2 col-12 col-md-6 d-flex items-center justify-center">
+              <Link
+                to="/login"
+                className="w-full d-flex items-center justify-center"
               >
-                Preview
-              </button>
-            </Link>
+                <button
+                  type="button"
+                  className=" flex h-fit w-full btn btn-primary m-3 col-12 col-sm-8 col-md-6 "
+                >
+                  Preview
+                </button>
+              </Link>
+            </div>
           </div>
+          <h5 className="d-flex items-center justify-center border p-2">
+            Images
+          </h5>
+          <div>{LoginSlider()}</div>
         </section>
 
         <section className="container my-10 w-full relative p-0">
-          <h2 className="text-R-blue text-3xl lg:text-left mb-6 pb-3 mb-3">
+          <h2 className="text-R-blue text-3xl lg:text-left p-3 mb-1">
             2. Custom Book Order
           </h2>
-          <div>{CBookSlider()}</div>
-          <div className="d-flex mt-16 flex-column flex-md-row">
+
+          <div className="d-flex mt-6 flex-column flex-md-row m-3">
             <div className="col-12 col-md-6 p-2">
               <h5>Use:</h5>
               <p className="text-R-grey text-lg text-start mb-6">
@@ -90,25 +93,31 @@ function Home() {
               </p>
             </div>
 
-            <Link
-              to="/orderbook"
-              className="p-2 col-12 col-md-6 d-flex items-center justify-center"
-            >
-              <button
-                type="button"
-                className=" flex h-fit w-fit btn btn-primary mb-3 col-6"
+            <div className="p-2 col-12 col-md-6 d-flex items-center justify-center">
+              <Link
+                to="/orderbook"
+                className="w-full d-flex items-center justify-center"
               >
-                Preview
-              </button>
-            </Link>
+                <button
+                  type="button"
+                  className=" flex h-fit w-full btn btn-primary m-3 col-12 col-sm-8 col-md-6 "
+                >
+                  Preview
+                </button>
+              </Link>
+            </div>
           </div>
+          <h5 className="d-flex items-center justify-center border p-2">
+            Images
+          </h5>
+          <div>{CBookSlider()}</div>
         </section>
 
         <section className="container my-10 w-full relative p-0">
-          <h2 className="text-R-blue text-3xl lg:text-left pb-3 mb-1">
+          <h2 className="text-R-blue text-3xl lg:text-left p-3  mb-1">
             3. Video Chat
           </h2>
-          <div className="d-flex mt-8 flex-column flex-md-row">
+          <div className="d-flex mt-8 flex-column flex-md-row m-3">
             <div className="col-12 col-md-6 p-2">
               <h5>Use:</h5>
               <p className="text-R-grey text-lg text-start mb-6">
@@ -121,17 +130,19 @@ function Home() {
               </p>
             </div>
 
-            <Link
-              to="/vchat"
-              className="p-2 col-12 col-md-6 d-flex items-center justify-center"
-            >
-              <button
-                type="button"
-                className=" flex h-fit w-fit btn btn-primary mb-3 col-6"
+            <div className="p-2 col-12 col-md-6 d-flex items-center justify-center">
+              <Link
+                to="/vchat"
+                className="w-full d-flex items-center justify-center"
               >
-                Preview
-              </button>
-            </Link>
+                <button
+                  type="button"
+                  className=" flex h-fit w-full btn btn-primary m-3 col-12 col-sm-8 col-md-6 "
+                >
+                  Preview
+                </button>
+              </Link>
+            </div>
           </div>
         </section>
 

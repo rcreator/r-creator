@@ -95,7 +95,12 @@ const Cartfunction = () => {
         min: min,
         max: max,
       })
-      .then((res) => setCart(res.data))
+      .then((res) => {
+        setCart(res.data);
+        if (res.data.total < max) {
+          setMax(res.data.total);
+        }
+      })
       .catch((err) => console.log(err));
   }, [tg]);
 
