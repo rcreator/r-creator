@@ -41,8 +41,8 @@ function About() {
               <p>
                 {" "}
                 Hello, I am developing web application component which might be
-                usefull or help to people for develope their own web
-                application. You can found all my code in given github link.
+                usefull or help to people for develop their own web application.
+                You can found all my code in given github link.
               </p>
             </div>
           </div>

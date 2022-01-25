@@ -12,6 +12,8 @@ import Cart from "./Pages/Two/Cart";
 import ConfirmOrder from "./Pages/Two/ConfirmOrder";
 import Orders from "./Pages/Two/Orders";
 import Videochat from "./Pages/Three/Videochat";
+import Fun from "./Pages/Four/Fun";
+import Intro from "./Pages/Four/Intro";
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/vchat" element={<Videochat />}></Route>
+          <Route path="/fun" element={<Intro />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

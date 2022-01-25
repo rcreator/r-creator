@@ -52,7 +52,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="p-2 col-12 col-md-6 d-flex items-center justify-center">
+            <div className="p-2 col-12 col-md-6 d-flex flex-column items-center justify-center">
               <Link
                 to="/login"
                 className="w-full d-flex items-center justify-center"
@@ -64,6 +64,12 @@ function Home() {
                   Preview
                 </button>
               </Link>
+              <div>
+                Github:{" "}
+                <a href="https://github.com/rcreator/r-creator/tree/master/r-creator/src/Pages/One">
+                  Click Here
+                </a>
+              </div>
             </div>
           </div>
           <h5 className="d-flex items-center justify-center border p-2">
@@ -93,7 +99,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="p-2 col-12 col-md-6 d-flex items-center justify-center">
+            <div className="p-2 col-12 col-md-6 d-flex flex-column items-center justify-center">
               <Link
                 to="/orderbook"
                 className="w-full d-flex items-center justify-center"
@@ -105,6 +111,12 @@ function Home() {
                   Preview
                 </button>
               </Link>
+              <div>
+                Github:{" "}
+                <a href="https://github.com/rcreator/r-creator/tree/master/r-creator/src/Pages/Two">
+                  Click Here
+                </a>
+              </div>
             </div>
           </div>
           <h5 className="d-flex items-center justify-center border p-2">
@@ -130,7 +142,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="p-2 col-12 col-md-6 d-flex items-center justify-center">
+            <div className="p-2 col-12 col-md-6 d-flex flex-column items-center justify-center">
               <Link
                 to="/vchat"
                 className="w-full d-flex items-center justify-center"
@@ -142,6 +154,12 @@ function Home() {
                   Preview
                 </button>
               </Link>
+              <div>
+                Github:{" "}
+                <a href="https://github.com/rcreator/r-creator/tree/master/r-creator/src/Pages/Three">
+                  Click Here
+                </a>
+              </div>
             </div>
           </div>
         </section>

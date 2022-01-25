@@ -1,0 +1,198 @@
+#centercircle {
+  border: dashed 2px gray;
+}
+
+#brand {
+  background: green;
+  text-overflow: clip;
+}
+
+#paper {
+  animation: paper;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes paper {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+#me {
+  transform: rotate(135deg) translateX(-40px) translateY(-1px);
+  animation: mrght;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#ms {
+  transform: rotate(315deg);
+  animation: mrlft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#mb {
+  transform: rotate(225deg);
+  animation: mrbotm;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#mt {
+  animation: mrtop;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mrtop {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 48px;
+  }
+}
+
+@keyframes mrght {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 24px;
+  }
+}
+
+@keyframes mrbotm {
+  from {
+    margin-bottom: 0px;
+  }
+  to {
+    margin-bottom: 48px;
+  }
+}
+
+@keyframes mrlft {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 47px;
+  }
+}
+
+.tanslatenone {
+  animation: sidebardisplay;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.translateleft {
+  animation: sidebarhide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sidebardisplay {
+  from {
+    transform: translateX(-400px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes sidebarhide {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-400px);
+  }
+}
+
+.translate-X-leftdd {
+  animation: sidebarclose;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#Rlist li {
+  padding: 10px 10px 10px 40px;
+}
+
+#Seclist a,
+button {
+  border: transparent 1px solid;
+  padding: 6px 14px;
+  margin: 7px;
+}
+
+#Seclist {
+  background: #232f3e;
+}
+
+#Seclist a:hover,
+button:hover {
+  border: white 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#droplist li {
+  cursor: pointer;
+}
+
+#droplist li a {
+  width: 100%;
+  padding: 6px;
+  display: inline-block;
+}
+
+#droplist li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#productscroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 300px;
+}
+
+#productscroll div {
+  width: 16%;
+  display: inline-flex !important;
+}
+
+@media (max-width: 600px) and (min-width: 451px) {
+  #productscroll div {
+    width: 33%;
+  }
+}
+
+@media (max-width: 300px) {
+  #productscroll div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 301px) {
+  #productscroll div {
+    width: 66%;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  #productscroll div {
+    width: 25%;
+  }
+}
+
+#footerlist ul li {
+  padding: 6px;
+}
