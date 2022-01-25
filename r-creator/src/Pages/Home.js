@@ -164,6 +164,44 @@ function Home() {
           </div>
         </section>
 
+        <section className="container my-10 w-full relative p-0">
+          <h2 className="text-R-blue text-3xl lg:text-left p-3  mb-1">
+            4. Ecom Landing Pages
+          </h2>
+          <div className="d-flex mt-8 flex-column flex-md-row m-3">
+            <div className="col-12 col-md-6 p-2">
+              <h5>Use:</h5>
+              <p className="text-R-grey text-lg text-start mb-6">
+                HTML, CSS, Bootstrap, React JS
+              </p>
+              <h5>Description:</h5>
+              <p className="text-R-grey text-lg text-start mb-6">
+                You can find responsive landing page of web appliation
+              </p>
+            </div>
+
+            <div className="p-2 col-12 col-md-6 d-flex flex-column items-center justify-center">
+              <Link
+                to="/fun"
+                className="w-full d-flex items-center justify-center"
+              >
+                <button
+                  type="button"
+                  className=" flex h-fit w-full btn btn-primary m-3 col-12 col-sm-8 col-md-6 "
+                >
+                  Preview
+                </button>
+              </Link>
+              <div>
+                Github:{" "}
+                <a href="https://github.com/rcreator/r-creator/tree/master/r-creator/src/Pages/Four">
+                  Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {newsLetter()}
         {footer()}
       </div>

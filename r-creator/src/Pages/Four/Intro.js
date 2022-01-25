@@ -1,15 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../../Style/fun.module.css";
 import { Avatar } from "@material-ui/core";
 import Recom from "../../components/Recom";
 
 function Intro() {
-  const { sidebar, header, window, main, footer, toggle, setToggle } = Recom();
+  const {
+    sidebar,
+    header,
+    window,
+    main,
+    footer,
+    toggle,
+    setToggle,
+    toogleSidebar,
+  } = Recom();
   const [completed, setCompleted] = useState(false);
   var [progress, setProgress] = useState(1);
   var [int, setInt] = useState("");
   const [ready, setReady] = useState(0);
 
+  let timer;
   function progressbar() {
     setProgress(progress++);
     if (progress > 100) {
@@ -22,11 +32,11 @@ function Intro() {
     const timer = setTimeout(() => {
       setReady(ready + 1);
     }, 1000);
-    return () => clearTimeout(timer);
   }
 
   useEffect(() => {
     int = setInterval(progressbar, 20);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -110,65 +120,7 @@ function Intro() {
         </div>
       ) : (
         <div>
-          <div
-            onClick={() => setToggle(false)}
-            className={`absolute vw-100 vh-100 z-100 ${
-              toggle ? "bg-gray-500/70" : "hidden"
-            }`}
-          ></div>
-
-          <div
-            className={`absolute w-80 vh-100 bg-light z-100 ${
-              toggle ? style.tanslatenone : style.translateleft
-            }`}
-          >
-            <div>
-              <ul id={style.Rlist} className="p-0">
-                <li className="p-0">
-                  <div className="d-flex justify-between items-center text-white p-3 bg-R-blue w-full">
-                    <div className="d-flex  justify-center items-center gap-4">
-                      <div className="ml-6">
-                        <Avatar />{" "}
-                      </div>
-                      <div> Hello, Ravi </div>
-                    </div>
-
-                    <div>
-                      <i
-                        className="fas fa-times cursor-pointer"
-                        onClick={() => setToggle(false)}
-                      ></i>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <h6 className="m-0">Treanding</h6>
-                </li>
-                <li>Best Sellers</li>
-                <li className="d-flex justify-between items-center">
-                  <div>New Releases</div>
-                  <i className="fas fa-chevron-right"></i>
-                </li>
-                <li>Move and Shakers</li>
-                <li className="bg-light" style={{ padding: 1 }}></li>
-                <li>
-                  <h6 className="m-0">Digital Content And Devices</h6>
-                </li>
-                <li>Fire TV</li>
-                <li>eBooks</li>
-                <li>Audiobook</li>
-                <li className="bg-light" style={{ padding: 1 }}></li>
-                <li>
-                  <h6 className="m-0">Shop By Department</h6>
-                </li>
-                <li>Mobile</li>
-                <li>Computer</li>
-                <li>Fashion</li>
-              </ul>
-            </div>
-            <div></div>
-          </div>
-
+          {toogleSidebar()}
           <div className="overflow-hidden">
             {window()}
             {header()}
